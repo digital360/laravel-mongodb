@@ -44,6 +44,9 @@ class Connection extends BaseConnection
         // Select database
         $this->db = $this->connection->selectDatabase($config['database']);
 
+        // set database name
+        $this->setDatabaseName($config['database']);
+
         $this->useDefaultPostProcessor();
 
         $this->useDefaultSchemaGrammar();
